@@ -1,3 +1,8 @@
+<?php
+    // Default location : Paris
+    $location = "Paris";
+    include "callapi.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,19 +10,10 @@
     <title>Weather App</title>
 </head>
 <body>
-    <?php
-        $key = "";
-        $url = "";
+    <input type="text">
+    <button onclick="" type="submit">See the weather</button>
 
-        $curl = curl_init();
-        curl_setopt($curl, CURLOPT_URL, $url);
-        curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
-        $output = curl_exec($curl);
-        curl_close($curl);
-    ?>
-    <script>
-        var x = <?php $curl; ?>;
-        console.log(x);
-    </script>
+    <!-- Global Script -->
+    <script src="js.js"></script>
 </body>
 </html>
