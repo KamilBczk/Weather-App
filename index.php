@@ -1,6 +1,9 @@
 <?php
     // Default location : Paris
-    $location = "Paris";
+    if (isset($_GET['location']))
+        $location = $_GET['location'];
+    else
+        $location = 'Paris';
     include "callapi.php";
 ?>
 <!DOCTYPE html>
@@ -10,10 +13,11 @@
     <title>Weather App</title>
 </head>
 <body>
-    <input type="text">
-    <button onclick="" type="submit">See the weather</button>
+    <?= $weather['temp'] ?>
 
     <!-- Global Script -->
-    <script src="js.js"></script>
+    <script src="js.js">
+
+    </script>
 </body>
 </html>
