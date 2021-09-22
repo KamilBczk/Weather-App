@@ -8,5 +8,18 @@
     $output = curl_exec($curl);
     curl_close($curl);
 
-    echo $output;
+    //echo $output;
+    if ($output == false)
+        echo "Erreur";
+    else
+    {
+        $reuslt = json_decode($output, true);
+        $country =  $reuslt['location']['country'];
+        $city =     $reuslt['location']['name'];
+        $time =     $reuslt['location']['localtime'];
+    }
+    echo $country;
+    echo $city;
+    echo $time;
+
 ?>
